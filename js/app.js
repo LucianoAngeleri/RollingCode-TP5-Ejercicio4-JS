@@ -21,6 +21,20 @@ textoFecha.innerHTML=`${nombresDias[diaSemana]} ${diaNum} de ${nombresMeses[mes]
 if (hs >= 12) {
     hs -=12;
     siglas = "PM";
+}else{
+    siglas = "AM";
+}
+if (hs == 0) {
+    hs = 12;
+}
+if (hs < 10) {
+    hs = "0" + hs;
+}
+if (min < 10) {
+    min = "0" + min;
+}
+if (seg < 10) {
+    seg = "0" + seg;
 }
 textoHs.innerHTML = `${hs}<small class="fs-6 ps-1">hs</small>`
 textoMin.innerHTML = `${min}<small class="fs-6 ps-1">min</small>`
